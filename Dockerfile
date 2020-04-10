@@ -48,7 +48,7 @@ ADD requirements.txt .
 RUN ln -nfs /usr/local/bin/pip3.8 /usr/local/bin/pip && \
     ln -nfs /usr/local/bin/python3.8 /usr/local/bin/python
 RUN pip install -r requirements.txt -t /package/
-ADD lambda_function /package
-ADD data /package/data
+ADD src /package
+ADD development/data /package/data
 RUN cd /package && \
     zip -r9 /deploy.zip .
