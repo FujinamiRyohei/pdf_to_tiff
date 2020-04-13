@@ -1,2 +1,1 @@
-pdf2image
-pytest
+pdf2image==1.12.1
